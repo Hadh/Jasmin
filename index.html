@@ -12,10 +12,12 @@
 <body onload="fetchBookmarks()">
     <div class="site-wrapper">
         <div class="inner">
-            <h3 class="masthead-brand"><img style="margin-left: 30px;" src="img/logo.PNG"> </h3>
+            <h3 class="masthead-brand"><img style="margin-left: 30px; margin-top: -15px;" src="img/logo.png"> </h3>
             <nav style="margin-right: 200px;">
                 <ul class="nav masthead-nav">
                     <li class="active"><a href="http://keep.google.com">Google Keep</a></li>
+                    <li><a href="http://evernote.com">Evernote</a></li>
+                    <li><a href="http://Medium.com">Medium</a></li>
                     <li><a href="http://youtube.com">YouTube</a></li>
                     <li><a href="http://messenger.com">Messenger</a></li>
                 </ul>
@@ -30,16 +32,16 @@
 
                     <form action="index.html" id="myForm" method="post">
                         <div class="form-group">
-                            <label>To-Do</label>
+                            <label style="font-size:17px;">To-Do</label>
                             <input type="text" placeholder="To-Do Item" class="form-control" id="siteName" value="">
                         </div>
                         <div class="form-group">
-                            <label>Category</label>
+                            <label style="font-size:17px;">Category</label>
                             <input type="text" placeholder="Ex : Study, Personal..." class="form-control" id="siteUrl" value="">
                         </div>
                         <input type="submit" class="btn btn-lg btn-primary" value="Add" />
                     </form>
-                    
+
                 </p>
                 <p class="lead">
                     <div id="bookmarksResults">
