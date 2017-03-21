@@ -1,27 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Clock App</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cover Template for Bootstrap</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
-    <div id="header">What Are Your Plans For Today?</div>
-    <div id="list">
-        <ul>
-            <li><a href="http://keep.google.com">Google Keep</a></li>
-            <li><a href="http://youtube.com">YouTube</a></li>
-            <li><a href="http://messenger.com">Messenger</a></li>
-        </ul>
-    </div>
-    <div id="clock"></div>
-    <div id="msg">
 
-    </div>
+<body onload="fetchBookmarks()">
+    <div class="site-wrapper">
+        <div class="inner">
+            <h3 class="masthead-brand"><img style="margin-left: 30px;" src="img/logo.png"> </h3>
+            <nav style="margin-right: 200px;">
+                <ul class="nav masthead-nav">
+                    <li class="active"><a href="http://keep.google.com">Google Keep</a></li>
+                    <li><a href="http://youtube.com">YouTube</a></li>
+                    <li><a href="http://messenger.com">Messenger</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="cover-container">
 
-    <script src="js/app.js" charset="utf-8"></script>
+            <div class="inner cover">
+                <h1 class="cover-heading"><div id="clock"></div></h1>
+                <h1 class="cover-heading"><div id="msg"></div></h1>
+                <p class="lead">
+
+                    <form action="index.html" id="myForm" method="post">
+                        <div class="form-group">
+                            <label>To-Do</label>
+                            <input type="text" placeholder="To-Do Item" class="form-control" id="siteName" value="">
+                        </div>
+                        <div class="form-group">
+                            <label>Category</label>
+                            <input type="text" placeholder="Ex : Study, Personal..." class="form-control" id="siteUrl" value="">
+                        </div>
+                        <input type="submit" class="btn btn-lg btn-primary" value="Add" />
+                    </form>
+                    
+                </p>
+                <p class="lead">
+                    <div id="bookmarksResults">
+                    </div>
+                </p>
+            </div>
+        </div>
+        <div style="padding-right: 450px;" class="mastfoot">
+            <div class="inner">
+                <p>Coded with <span class="glyphicon glyphicon-heart red" aria-hidden="true"></span> by <a href="https://github.com/Hadh">@Hadh</a>.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.0.js" integrity="sha256-wPFJNIFlVY49B+CuAIrDr932XSb6Jk3J1M22M3E2ylQ=" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
